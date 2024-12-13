@@ -16,7 +16,7 @@ import constants.Constant;
 public class SubCategory {
 	public WebDriver driver;
 	public SubCategory(WebDriver driver)
-	{
+	{ 
 	this.driver=driver; 
 	PageFactory.initElements(driver,this);
 	}

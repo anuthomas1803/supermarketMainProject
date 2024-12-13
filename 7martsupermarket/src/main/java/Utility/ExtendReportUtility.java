@@ -15,4 +15,4 @@ public class ExtendReportUtility {
 		extentReports.setSystemInfo("Name", "Anu");
 		return extentReports;
 
-	}}
+	}} 

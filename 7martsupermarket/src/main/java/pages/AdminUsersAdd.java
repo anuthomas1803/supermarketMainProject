@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import Utility.PageUtility;
 import Utility.WaitUtility;
 
-public class AdminUsersAdd {
+public class AdminUsersAdd { 
 		public WebDriver driver;
 		public AdminUsersAdd(WebDriver driver)
 		{

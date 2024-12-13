@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ManageProduct {
+public class ManageProduct { 
 
 	public WebDriver driver;
 	public ManageProduct(WebDriver driver)

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNews {
-	public WebDriver driver;
+	public WebDriver driver; 
 	public ManageNews(WebDriver driver)
 	{
 	this.driver=driver;	

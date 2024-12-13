@@ -16,7 +16,7 @@ public class CategoryAdd {
 public WebDriver driver;
 
 public CategoryAdd(WebDriver driver)
-{  this.driver=driver;
+{  this.driver=driver; 
 PageFactory.initElements(driver,this);
 }
 

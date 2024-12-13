@@ -12,7 +12,7 @@ public class CategorySearch {
 		{  this.driver=driver;
 		PageFactory.initElements(driver,this);
 		}
-		
+		 
 	@FindBy(xpath="//input[@class='form-control']")	WebElement enterCategoryField;
 	@FindBy(xpath="//button[@type='submit']") WebElement search;
 	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]") WebElement searchDetailsTable;

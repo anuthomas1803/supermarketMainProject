@@ -16,7 +16,7 @@ public class FileUploadUtility {
 		public void sendKeysProfileUpload(WebElement element, String path) {
 			element.sendKeys(path);
 		}
-
+ 
 		public void robotForFileUpload(WebElement element, String path) throws AWTException {
 			StringSelection fileselect = new StringSelection(path);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(fileselect, null);

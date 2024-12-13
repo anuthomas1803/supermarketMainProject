@@ -12,4 +12,4 @@ public class Constant {
 	public static final String CATEGORYALERTMESSAGE="Alert!Category already exists";
 	public static final String NOTABLEMESSAGE="Table not displayed";
 	public static final String CONFIGFILE=System.getProperty("user.dir")+ "\\src\\test\\resources\\Config.properties";
-}
+} 

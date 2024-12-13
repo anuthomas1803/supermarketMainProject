@@ -13,7 +13,7 @@ public void selectByIndex(WebElement dropdown,int index)
 {
 	Select Selobj=new Select(dropdown);
 	Selobj.selectByIndex(index);
-	
+	 
 }	
 public void dragNDrop(WebElement dragdrop1,WebElement destination)
 {

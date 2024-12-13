@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AdminUserUpdate {
-
+ 
 	public WebDriver driver;
 	String username;
 	public AdminUserUpdate(WebDriver driver)

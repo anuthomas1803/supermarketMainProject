@@ -20,7 +20,7 @@ public class ScreenshotUtility {
 																					// (user.dir) automatically folder
 	if (!f1.exists()) {
 		f1.mkdirs();// mkdir --> will create folder using java make directory, incase folder is not created automatically
-	}
+	} 
 
 	String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
 																						// java

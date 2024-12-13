@@ -14,7 +14,7 @@ import Utility.WaitUtility;
 
 public class AdminUserSearch {
 
-		public WebDriver driver;
+		public WebDriver driver; 
 		String username;
 		public AdminUserSearch(WebDriver driver)
 		{
