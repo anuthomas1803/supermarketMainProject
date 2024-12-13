@@ -19,7 +19,7 @@ public class ManageProductTest extends Base{
 		public Home Homepage;
 		ManageProduct delete;
 	   
-		 @Test
+		 @Test 
 	 public void verifyifAdminIsAbletoDeleteAProductFromList() throws AWTException, IOException 
 	 {	
 

@@ -20,7 +20,7 @@ public class CategorySearchTest extends Base {
 	public CategoryAdd category;
 	public CategorySearch search;
 
-	@Test
+	@Test 
 	public void verifyifAdminIsAbletoSearchCategory() throws AWTException, IOException {
 		LoginPage login = new LoginPage(driver); 
 	String username1 = ExcelUtility.readStringData(1, 0, "login");

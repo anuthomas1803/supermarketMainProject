@@ -1,4 +1,4 @@
-package testscript;
+ package testscript;
 
 
 import static org.junit.Assert.assertTrue;

@@ -23,7 +23,7 @@ public class CategoryAddTest extends Base {
 	String username1 = ExcelUtility.readStringData(1, 0, "login");
 	String password1 = ExcelUtility.readStringData(1, 1, "login");
 
-	
+ 	
 		login.enter_credentials(username1, password1);
 		Homepage = login.click_signinbuton();
 		category = Homepage.gotocategory();

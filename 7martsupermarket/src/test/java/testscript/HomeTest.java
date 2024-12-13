@@ -13,7 +13,7 @@ import pages.LoginPage;
 	
 	public class HomeTest extends Base{
 	public Home Homepage;
-	@Test
+	@Test 
 	public void verifyifUserIsAbleToLogOut() throws AWTException, IOException
 	{
 		  String username=ExcelUtility.readStringData(1,0,"login");

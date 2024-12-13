@@ -17,7 +17,7 @@ public class SubCategoryTest extends Base {
 public Home Homepage;
 public SubCategory category;
 
-@Test
+@Test 
 public void verifyifAdminIsAbletoaddCategory() throws AWTException, IOException {
 	LoginPage login = new LoginPage(driver); 
 String username1 = ExcelUtility.readStringData(1, 0, "login");

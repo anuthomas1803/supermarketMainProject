@@ -31,7 +31,7 @@ public class Base {
 						properties = new Properties();
 						fis = new FileInputStream(Constant.CONFIGFILE);
 						properties.load(fis);
-
+ 
 					} catch (FileNotFoundException exception) {
 						exception.printStackTrace();
 					}

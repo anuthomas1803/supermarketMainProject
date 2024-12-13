@@ -21,7 +21,7 @@ public class AdminUserSearchTest extends Base{
 	public AdminUsersAdd adminuser;
 	public AdminUserSearch usersearch;
    
-	 @Test
+	 @Test 
  public void verifyifAdminIsAbletosearchnewuser() throws AWTException, IOException 
 				{
 

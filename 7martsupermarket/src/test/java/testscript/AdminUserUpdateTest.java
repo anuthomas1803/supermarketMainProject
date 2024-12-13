@@ -22,7 +22,7 @@ public class AdminUserUpdateTest extends Base{
 	public AdminUserUpdate update;
 	 @Test
 public void verifyifAdminIsAbletUpdateUserDetails() throws AWTException, IOException 
-				{
+	 			{
 
 			String username = ExcelUtility.readStringData(1, 0, "login");
 			String password = ExcelUtility.readStringData(1, 1, "login");

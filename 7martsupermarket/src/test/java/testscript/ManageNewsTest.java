@@ -16,7 +16,7 @@ import retry.Retry;
 
 public class ManageNewsTest extends Base {
 	public Home Homepage;
-	public ManageNews News;
+	public ManageNews News; 
 	
 	@Test(retryAnalyzer = retry.Retry.class)
   public void verifyifAdminIsAbletoaddnewuser() throws AWTException, IOException {
