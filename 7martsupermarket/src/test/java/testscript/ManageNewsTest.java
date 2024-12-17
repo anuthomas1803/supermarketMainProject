@@ -16,18 +16,18 @@ import retry.Retry;
 
 public class ManageNewsTest extends Base {
 	public Home Homepage;
-	public ManageNews News; 
-	
+	public ManageNews News;
+
 	@Test(retryAnalyzer = retry.Retry.class)
-  public void verifyifAdminIsAbletoaddnewuser() throws AWTException, IOException {
+	public void verifyifAdminIsAbletoaddnewuser() throws AWTException, IOException {
 		LoginPage login = new LoginPage(driver);
-	String username1 = ExcelUtility.readStringData(1, 0, "login");
-    String password1 = ExcelUtility.readStringData(1, 1, "login");
-    
+		String username1 = ExcelUtility.readStringData(1, 0, "login");
+		String password1 = ExcelUtility.readStringData(1, 1, "login");
+
 		login.enter_credentials(username1, password1);
-	    Homepage = login.click_signinbuton();
+		Homepage = login.click_signinbuton();
 		News = Homepage.gotomanagenews();
-		News. newoption();
+		News.newoption();
 		String news = ExcelUtility.readStringData(0, 0, "News");
 		News.enternews(news);
 		News.saveoption();

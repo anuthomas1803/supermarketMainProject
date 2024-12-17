@@ -13,87 +13,90 @@ import Utility.WaitUtility;
 import constants.Constant;
 
 public class CategoryAdd {
-public WebDriver driver;
+	public WebDriver driver;
 
-public CategoryAdd(WebDriver driver)
-{  this.driver=driver; 
-PageFactory.initElements(driver,this);
-}
+	public CategoryAdd(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
-@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") WebElement newOption;
-@FindBy(id="category") WebElement categoryField;
-@FindBy(id="134-selectable") WebElement group1;
-@FindBy(xpath="//div[@class='ms-selection")  WebElement group2;
-@FindBy(xpath="//input[@type='file']") WebElement imageBrowse;
-@FindBy(xpath="//label[text()='Show On Top Menu']") WebElement showOnTopMenu;
-@FindBy(xpath="//label[text()='Show On Left Menu']") WebElement showOnLeftMenu;
-@FindBy(xpath="//button[@name='create']") WebElement savebutton;
-@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement successAlert;
-@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']") WebElement searchOption;
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
+	WebElement newOption;
+	@FindBy(id = "category")
+	WebElement categoryField;
+	@FindBy(id = "134-selectable")
+	WebElement group1;
+	@FindBy(xpath = "//div[@class='ms-selection")
+	WebElement group2;
+	@FindBy(xpath = "//input[@type='file']")
+	WebElement imageBrowse;
+	@FindBy(xpath = "//label[text()='Show On Top Menu']")
+	WebElement showOnTopMenu;
+	@FindBy(xpath = "//label[text()='Show On Left Menu']")
+	WebElement showOnLeftMenu;
+	@FindBy(xpath = "//button[@name='create']")
+	WebElement savebutton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement successAlert;
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")
+	WebElement searchOption;
 
-public CategoryAdd newCategory()
-{
-	newOption.click();
-	return this;
-}
+	public CategoryAdd newCategory() {
+		newOption.click();
+		return this;
+	}
 
+	public CategoryAdd enterCategoryField(String category) {
+		categoryField.sendKeys(category);
+		return this;
+	}
 
-public CategoryAdd enterCategoryField(String category)
-{
-	categoryField.sendKeys(category);
-	return this;
-}
-public CategoryAdd selectGroups()
-{
-group1.click();
-return this;
-}
-public CategoryAdd uploadImage()
-{
-	JavascriptExecutor javascript=(JavascriptExecutor)driver;
-	javascript.executeScript("window.scrollBy(0,1000)", "");
-	FileUploadUtility page=new FileUploadUtility();
-	page.sendKeysProfileUpload(imageBrowse, Constant.SUBCATEGORYIMAGEPATH);
-	return this;
-}
-public CategoryAdd showOnMenuTop()
-{
-	JavascriptExecutor javascript=(JavascriptExecutor)driver;
-	javascript.executeScript("window.scrollBy(0,4500)", "");
-	
-	showOnTopMenu.click();
-	return this;
-}
-public CategoryAdd showOnMenuLeft()
-{
+	public CategoryAdd selectGroups() {
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("window.scrollBy(0,400)", "");
+		group1.click();
+		return this;
+	}
 
-	JavascriptExecutor javascript=(JavascriptExecutor)driver;
-	javascript.executeScript("window.scrollBy(0,2000)", "");
-	showOnLeftMenu.click();
-	return this;
-	
-}
-public CategoryAdd saveDetails()
-{
+	public CategoryAdd uploadImage() {
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("window.scrollBy(0,200)", "");
+		FileUploadUtility page = new FileUploadUtility();
+		page.sendKeysProfileUpload(imageBrowse, Constant.SUBCATEGORYIMAGEPATH);
+		return this;
+	}
 
-	
-	WaitUtility wait=new WaitUtility();
-	wait.waitForELementsToClick( driver,savebutton);
-	
-	JavascriptExecutor javascript1=(JavascriptExecutor)driver;
-	javascript1.executeScript("arguments[0].click();",savebutton);
-	return this;   
-}
-public boolean isUserAbleToSave()
-{
-return successAlert.isDisplayed();	
-}
+	public CategoryAdd showOnMenuTop() {
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("window.scrollBy(0,200)", "");
+		showOnTopMenu.click();		
+		return this;
+	}
 
-public CategorySearch searchbutton()
-{
-	
-JavascriptExecutor javascript=(JavascriptExecutor)driver;
-javascript.executeScript("arguments[0].click();",searchOption);
-return new CategorySearch(driver);
-}   
+	public CategoryAdd showOnMenuLeft() {
+		showOnLeftMenu.click();
+		return this;
+
+	}
+
+	public CategoryAdd saveDetails() {
+
+		WaitUtility wait = new WaitUtility();
+		wait.waitForELementsToClick(driver, savebutton);
+
+		JavascriptExecutor javascript1 = (JavascriptExecutor) driver;
+		javascript1.executeScript("arguments[0].click();", savebutton);
+		return this;
+	}
+
+	public boolean isUserAbleToSave() {
+		return successAlert.isDisplayed();
+	}
+
+	public CategorySearch searchbutton() {
+
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("arguments[0].click();", searchOption);
+		return new CategorySearch(driver);
+	}
 }

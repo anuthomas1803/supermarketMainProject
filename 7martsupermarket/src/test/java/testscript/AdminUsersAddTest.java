@@ -1,7 +1,5 @@
- package testscript;
+package testscript;
 
-
-import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
@@ -22,23 +20,25 @@ public class AdminUsersAddTest extends Base {
 	public AdminUsersAdd adminuser;
 
 	@Test
-	@Parameters({ "username", "password" })
-public void verifyifAdminIsAbletoaddnewuser(String username,String password) throws AWTException, IOException {
+	public void verifyifAdminIsAbletoaddnewuser() throws AWTException, IOException {
 		LoginPage login = new LoginPage(driver);
-	String username1 = ExcelUtility.readStringData(1, 0, "login");
-    String password1 = ExcelUtility.readStringData(1, 1, "login");
+		String username1 = ExcelUtility.readStringData(1, 0, "login");
+		String password1 = ExcelUtility.readStringData(1, 1, "login");
 		login.enter_credentials(username1, password1);
 		Homepage = login.click_signinbuton();
 		adminuser = Homepage.gotoadminUser();
 		adminuser.createnew();
 
-		adminuser.enter_credentials(username, password);
+		String username2 = ExcelUtility.readStringData(1, 0, "AddUser");
+		String password2 = ExcelUtility.readStringData(1, 1, "AddUser");
+		adminuser.enter_credentials(username2, password2);
 		adminuser.userType();
 		adminuser.savedetails();
 
 		boolean isnewusersaved = adminuser.isSavesuccess();
-		assertTrue(isnewusersaved, Constant. ADDUSERALERTMESSAGE);
+		assertTrue(isnewusersaved, Constant.ADDUSERALERTMESSAGE);
 	}
+
 	@Test
 	public void verifyifAlertAppearsForNAmeThatAlreadyExist() throws AWTException, IOException {
 		LoginPage login = new LoginPage(driver);
@@ -50,8 +50,8 @@ public void verifyifAdminIsAbletoaddnewuser(String username,String password) thr
 		adminuser = Homepage.gotoadminUser();
 		adminuser.createnew();
 
-		String username2 = ExcelUtility.readStringData(3, 0, "AddUser");
-		String password2 = ExcelUtility.readStringData(3, 1, "AddUser");
+		String username2 = ExcelUtility.readStringData(1, 0, "AddUser");
+		String password2 = ExcelUtility.readStringData(1, 1, "AddUser");
 		adminuser.enter_credentials(username2, password2);
 		adminuser.userType();
 		adminuser.savedetails();

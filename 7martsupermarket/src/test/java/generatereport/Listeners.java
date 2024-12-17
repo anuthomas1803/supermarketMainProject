@@ -10,29 +10,30 @@ import com.aventstack.extentreports.Status;
 import Utility.ExtendReportUtility;
 
 public class Listeners implements ITestListener {
- 
+
 	ExtentTest test;
 
 	ExtentReports extent = ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) {//calls when test methods starts
+	public void onTestStart(ITestResult result) {
 		ITestListener.super.onTestStart(result);
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 	}
-public void onTestSuccess(ITestResult result) {//called when test method passess
+
+	public void onTestSuccess(ITestResult result) {
 		ITestListener.super.onTestSuccess(result);
 		extentTest.get().log(Status.PASS, "Test Passed");
 	}
 
-	public void onTestFailure(ITestResult result) {//called when test method fails
+	public void onTestFailure(ITestResult result) {
 		ITestListener.super.onTestFailure(result);
 		extentTest.get().log(Status.FAIL, "Test Failed");
 		extentTest.get().fail(result.getThrowable());
 		WebDriver driver = null;
 		String testMethodName = result.getMethod().getMethodName();
-try {
+		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
 		} catch (IllegalArgumentException e) {
@@ -48,31 +49,33 @@ try {
 
 			e.printStackTrace();
 		}
-try {
+		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
 		} catch (Exception e) {
 		}
 	}
 
-	public void onTestSkipped(ITestResult result) {//called when test method is skipped
+	public void onTestSkipped(ITestResult result) {
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
 		String testMethodName = result.getMethod().getMethodName();
 	}
-public void onTestFailedButWithinSuccessPercentage(ITestResult result) {//called when test method fails within success percentage
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	public void onTestFailedWithTimeOut(ITestResult result) {
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
-public void onStart(ITestContext context) {//called before test method starts
+
+	public void onStart(ITestContext context) {
 		ITestListener.super.onStart(context);
 	}
 
-	public void onFinish(ITestContext context) {//called after test method finishes
+	public void onFinish(ITestContext context) {
 		ITestListener.super.onFinish(context);
-		extent.flush();//if flush is not called report wont be generated
+		extent.flush();
 	}
 }

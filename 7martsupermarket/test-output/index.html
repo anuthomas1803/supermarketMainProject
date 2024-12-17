@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+            <a href="#" panel-name="suite-paralleltesting" class="navigator-link">
+              <span class="suite-name border-failed">paralleltesting</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\anuth\eclipse-workspace\7martsupermarket\ExtendReport.xml</span>
+                  <a href="#" panel-name="test-xml-paralleltesting" class="navigator-link ">
+                    <span>C:\Users\anuth\git\supermarketMainProject\7martsupermarket\paralleltesting.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-paralleltesting" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                  <a href="#" panel-name="group-paralleltesting" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                  <a href="#" panel-name="times-paralleltesting" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-paralleltesting" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-paralleltesting" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-paralleltesting" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,21 +92,49 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-paralleltesting" class="hide-methods failed suite-paralleltesting"> (hide)</a> <!-- hide-methods failed suite-paralleltesting -->
+                      <a href="#" panel-name="suite-paralleltesting" class="show-methods failed suite-paralleltesting"> (show)</a> <!-- show-methods failed suite-paralleltesting -->
+                    </span>
+                    <div class="method-list-content failed suite-paralleltesting">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-paralleltesting" title="testscript.ManageProductTest" class="method navigator-link" hash-for-method="verifyifAdminIsAbletoDeleteAProductFromList">verifyifAdminIsAbletoDeleteAProductFromList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-paralleltesting -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-paralleltesting" class="hide-methods skipped suite-paralleltesting"> (hide)</a> <!-- hide-methods skipped suite-paralleltesting -->
+                      <a href="#" panel-name="suite-paralleltesting" class="show-methods skipped suite-paralleltesting"> (show)</a> <!-- show-methods skipped suite-paralleltesting -->
+                    </span>
+                    <div class="method-list-content skipped suite-paralleltesting">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-paralleltesting" title="testscript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyifAdminIsAbletoaddnewuser">verifyifAdminIsAbletoaddnewuser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-paralleltesting -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-paralleltesting" class="hide-methods passed suite-paralleltesting"> (hide)</a> <!-- hide-methods passed suite-paralleltesting -->
+                      <a href="#" panel-name="suite-paralleltesting" class="show-methods passed suite-paralleltesting"> (show)</a> <!-- show-methods passed suite-paralleltesting -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content passed suite-paralleltesting">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginPageTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToLoginWithValidCredentials">verifyUserIsAbleToLoginWithValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-paralleltesting" title="testscript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyifAdminIsAbletoaddnewuser">verifyifAdminIsAbletoaddnewuser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-paralleltesting -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,142 +145,247 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+        <div panel-name="suite-paralleltesting" class="panel paralleltesting">
+          <div class="suite-paralleltesting-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testscript.LoginPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testscript.ManageProductTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToLoginWithValidCredentials">
-                  </a> <!-- verifyUserIsAbleToLoginWithValidCredentials -->
-                  <span class="method-name">verifyUserIsAbleToLoginWithValidCredentials</span>
+                  <a name="verifyifAdminIsAbletoDeleteAProductFromList">
+                  </a> <!-- verifyifAdminIsAbletoDeleteAProductFromList -->
+                  <span class="method-name">verifyifAdminIsAbletoDeleteAProductFromList</span>
+                  <div class="stack-trace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at Utility.ExcelUtility.readStringData(ExcelUtility.java:29)
+	at testscript.ManageProductTest.verifyifAdminIsAbletoDeleteAProductFromList(ManageProductTest.java:25)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDC6CE5A5
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 23 more
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-        </div> <!-- panel Suite -->
-        <div panel-name="test-xml-Suite" class="panel">
+          </div> <!-- suite-paralleltesting-class-failed -->
+          <div class="suite-paralleltesting-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testscript.ManageNewsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyifAdminIsAbletoaddnewuser">
+                  </a> <!-- verifyifAdminIsAbletoaddnewuser -->
+                  <span class="method-name">verifyifAdminIsAbletoaddnewuser</span>
+                  <div class="stack-trace">java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:182)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at Utility.ExcelUtility.readStringData(ExcelUtility.java:29)
+	at testscript.ManageNewsTest.verifyifAdminIsAbletoaddnewuser(ManageNewsTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-paralleltesting-class-skipped -->
+          <div class="suite-paralleltesting-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testscript.ManageNewsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyifAdminIsAbletoaddnewuser">
+                  </a> <!-- verifyifAdminIsAbletoaddnewuser -->
+                  <span class="method-name">verifyifAdminIsAbletoaddnewuser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-paralleltesting-class-passed -->
+        </div> <!-- panel paralleltesting -->
+        <div panel-name="test-xml-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anuth\eclipse-workspace\7martsupermarket\ExtendReport.xml</span>
+            <span class="header-content">C:\Users\anuth\git\supermarketMainProject\7martsupermarket\paralleltesting.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;generatereport.Listeners&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;supermarket&quot;&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;paralleltesting&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;chrometest&quot;&gt;
     &lt;parameter name=&quot;browzer&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;password&quot; value=&quot;admin&quot;/&gt;
-    &lt;parameter name=&quot;username&quot; value=&quot;admin&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscript.LoginPageTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyUserIsAbleToLoginWithValidCredentials&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscript.LoginPageTest --&gt;
+      &lt;class name=&quot;testscript.ManageNewsTest&quot;/&gt;
+      &lt;class name=&quot;testscript.ManageProductTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- supermarket --&gt;
-&lt;/suite&gt; &lt;!-- Suite --&gt;
+  &lt;/test&gt; &lt;!-- chrometest --&gt;
+&lt;/suite&gt; &lt;!-- paralleltesting --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite" class="panel">
+        <div panel-name="testlist-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite</span>
+            <span class="header-content">Tests for paralleltesting</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">supermarket (1 class)</span>
+                <span class="test-name">chrometest (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Suite" class="panel">
+        <div panel-name="group-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite</span>
+            <span class="header-content">Groups for paralleltesting</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Suite" class="panel">
+        <div panel-name="times-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite</span>
+            <span class="header-content">Times for paralleltesting</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite');
-function tableData_Suite() {
+suiteTableInitFunctions.push('tableData_paralleltesting');
+function tableData_paralleltesting() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToLoginWithValidCredentials')
-data.setCell(0, 2, 'testscript.LoginPageTest')
-data.setCell(0, 3, 1482);
-window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+data.setCell(0, 1, 'verifyifAdminIsAbletoaddnewuser')
+data.setCell(0, 2, 'testscript.ManageNewsTest')
+data.setCell(0, 3, 2616);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyifAdminIsAbletoaddnewuser')
+data.setCell(1, 2, 'testscript.ManageNewsTest')
+data.setCell(1, 3, 302);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyifAdminIsAbletoDeleteAProductFromList')
+data.setCell(2, 2, 'testscript.ManageProductTest')
+data.setCell(2, 3, 188);
+window.suiteTableData['paralleltesting']= { tableData: data, tableDiv: 'times-div-paralleltesting'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-              <div id="times-div-Suite">
-              </div> <!-- times-div-Suite -->
+              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <div id="times-div-paralleltesting">
+              </div> <!-- times-div-paralleltesting -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite" class="panel">
+        <div panel-name="reporter-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite</span>
+            <span class="header-content">Reporter output for paralleltesting</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite" class="panel">
+        <div panel-name="ignored-methods-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscript.LoginPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyUserIsAbleToLoginWithInvalidUsername</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserIsAbleToLoginWithInValidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserIsAbleToLoginWithInValidPassword</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Suite" class="panel">
+        <div panel-name="chronological-paralleltesting" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscript.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscript.ManageNewsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testscript.ManageProductTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testscript.ManageNewsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">verifyUserIsAbleToLoginWithValidCredentials</span>
-                <span class="method-start">2107 ms</span>
+                <span class="method-name">verifyifAdminIsAbletoaddnewuser</span>
+                <span class="method-start">1953 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testscript.ManageProductTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyifAdminIsAbletoDeleteAProductFromList</span>
+                <span class="method-start">2002 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyUserIsAbleToLoginWithValidCredentials status=SUCCESS method=LoginPageTest.ver...)</span>
-                <span class="method-start">3595 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyifAdminIsAbletoDeleteAProductFromList status=FAILURE method=ManageProductTest...)</span>
+                <span class="method-start">2196 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testscript.ManageNewsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyifAdminIsAbletoaddnewuser status=SKIP method=ManageNewsTest.verifyifAdminIsAb...)</span>
+                <span class="method-start">2260 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">2418 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyifAdminIsAbletoaddnewuser</span>
+                <span class="method-start">3789 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyifAdminIsAbletoaddnewuser status=SUCCESS method=ManageNewsTest.verifyifAdminI...)</span>
+                <span class="method-start">6407 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

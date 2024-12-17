@@ -15,35 +15,34 @@ import pages.AdminUsersAdd;
 import pages.Home;
 import pages.LoginPage;
 
-public class AdminUserSearchTest extends Base{
+public class AdminUserSearchTest extends Base {
 
 	public Home Homepage;
 	public AdminUsersAdd adminuser;
 	public AdminUserSearch usersearch;
-   
-	 @Test 
- public void verifyifAdminIsAbletosearchnewuser() throws AWTException, IOException 
-				{
 
-			String username = ExcelUtility.readStringData(1, 0, "login");
-			String password = ExcelUtility.readStringData(1, 1, "login");
-	
-			LoginPage login = new LoginPage(driver);
-			login.enter_credentials(username, password);
-				
-			Homepage = login.click_signinbuton();
-			adminuser = Homepage.gotoadminUser();   
-	    	usersearch=adminuser.searchbutton();
-		    
-		   String usernametosearch = ExcelUtility.readStringData(2, 0, "AddUser");
-		    usersearch.usernameSearch(usernametosearch);
-	   	    usersearch.usertypeSearch();
-	   	    usersearch.searchoption();
-	   	    usersearch.Search_ParticularElements();
-	   	    usersearch.Issearchdetailsdisplayed();
+	@Test
+	public void verifyifAdminIsAbletosearchuser() throws AWTException, IOException {
 
-			boolean isnewusersaved = usersearch.Issearchdetailsdisplayed();
-         	assertTrue(isnewusersaved, Constant. ADDUSERALERTMESSAGE);
+		String username = ExcelUtility.readStringData(1, 0, "login");
+		String password = ExcelUtility.readStringData(1, 1, "login");
 
-	  
-}}
+		LoginPage login = new LoginPage(driver);
+		login.enter_credentials(username, password);
+
+		Homepage = login.click_signinbuton();
+		adminuser = Homepage.gotoadminUser();
+		usersearch = adminuser.searchbutton();
+
+		String usernametosearch = ExcelUtility.readStringData(2, 0, "SearchUser");
+		usersearch.usernameSearch(usernametosearch);
+		usersearch.usertypeSearch();
+		usersearch.searchoption();
+		usersearch.Search_ParticularElements();
+		usersearch.Issearchdetailsdisplayed();
+
+		boolean isnewusersaved = usersearch.Issearchdetailsdisplayed();
+		assertTrue(isnewusersaved, Constant.ADDUSERALERTMESSAGE);
+
+	}
+}

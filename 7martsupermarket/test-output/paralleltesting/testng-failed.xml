@@ -3,23 +3,21 @@
 <suite parallel="classes" name="Failed suite [paralleltesting]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="chrometest(failed)">
     <parameter name="browzer" value="chrome"/>
-    <parameter name="password" value="admin"/>
-    <parameter name="username" value="admin"/>
     <classes>
-      <class name="testscript.AdminUsersAddTest">
+      <class name="testscript.ManageProductTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="verifyifAdminIsAbletoaddnewuser" invocation-numbers="0"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testscript.AdminUsersAddTest -->
-      <class name="testscript.LoginPageTest">
-        <methods>
-          <include name="verifyUserIsAbleToLoginWithValidCredentials"/>
+          <include name="verifyifAdminIsAbletoDeleteAProductFromList"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testscript.LoginPageTest -->
+      </class> <!-- testscript.ManageProductTest -->
+      <class name="testscript.ManageNewsTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifyifAdminIsAbletoaddnewuser"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testscript.ManageNewsTest -->
     </classes>
   </test> <!-- chrometest(failed) -->
 </suite> <!-- Failed suite [paralleltesting] -->

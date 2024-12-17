@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results retried="1" ignored="1" total="4" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-13T22:37:15 IST" name="Suite" finished-at="2024-12-13T22:37:19 IST" duration-ms="3774">
+  <suite started-at="2024-12-17T11:33:36 IST" name="paralleltesting" finished-at="2024-12-17T11:33:43 IST" duration-ms="6608">
     <groups>
     </groups>
-    <test started-at="2024-12-13T22:37:15 IST" name="supermarket" finished-at="2024-12-13T22:37:19 IST" duration-ms="3774">
-      <class name="testscript.LoginPageTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginPageTest@7dfd3c81]" started-at="2024-12-13T22:37:15 IST" name="beforeMethod" finished-at="2024-12-13T22:37:17 IST" duration-ms="2106" status="PASS">
+    <test started-at="2024-12-17T11:33:36 IST" name="chrometest" finished-at="2024-12-17T11:33:43 IST" duration-ms="6608">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:36 IST" name="beforeMethod" finished-at="2024-12-17T11:33:38 IST" duration-ms="1951" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,160 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginPageTest@7dfd3c81]" started-at="2024-12-13T22:37:17 IST" name="verifyUserIsAbleToLoginWithValidCredentials" finished-at="2024-12-13T22:37:19 IST" duration-ms="1482" status="PASS">
+        <test-method retried="true" signature="verifyifAdminIsAbletoaddnewuser()[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:38 IST" name="verifyifAdminIsAbletoaddnewuser" finished-at="2024-12-17T11:33:38 IST" duration-ms="302" status="SKIP">
+          <exception class="java.io.IOException">
+            <message>
+              <![CDATA[Stream Closed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.IOException: Stream Closed
+at java.base/java.io.FileInputStream.available0(Native Method)
+at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
+at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:182)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:82)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at Utility.ExcelUtility.readStringData(ExcelUtility.java:29)
+at testscript.ManageNewsTest.verifyifAdminIsAbletoaddnewuser(ManageNewsTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLoginWithValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginPageTest@7dfd3c81]" started-at="2024-12-13T22:37:19 IST" name="afterMethod" finished-at="2024-12-13T22:37:19 IST" duration-ms="153" status="PASS">
+        </test-method> <!-- verifyifAdminIsAbletoaddnewuser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:38 IST" name="afterMethod" finished-at="2024-12-17T11:33:38 IST" duration-ms="157" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginPageTest@7dfd3c81] output={null}]]]>
+                <![CDATA[[TestResult name=verifyifAdminIsAbletoaddnewuser status=SKIP method=ManageNewsTest.verifyifAdminIsAbletoaddnewuser()[pri:0, instance:testscript.ManageNewsTest@313ac989] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscript.LoginPageTest -->
-    </test> <!-- supermarket -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:39 IST" name="beforeMethod" finished-at="2024-12-17T11:33:40 IST" duration-ms="1371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyifAdminIsAbletoaddnewuser()[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:40 IST" name="verifyifAdminIsAbletoaddnewuser" finished-at="2024-12-17T11:33:42 IST" duration-ms="2616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyifAdminIsAbletoaddnewuser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@313ac989]" started-at="2024-12-17T11:33:42 IST" name="afterMethod" finished-at="2024-12-17T11:33:43 IST" duration-ms="165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyifAdminIsAbletoaddnewuser status=SUCCESS method=ManageNewsTest.verifyifAdminIsAbletoaddnewuser()[pri:0, instance:testscript.ManageNewsTest@313ac989] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testscript.ManageNewsTest -->
+      <class name="testscript.ManageProductTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.ManageProductTest@6771beb3]" started-at="2024-12-17T11:33:36 IST" name="beforeMethod" finished-at="2024-12-17T11:33:38 IST" duration-ms="2002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyifAdminIsAbletoDeleteAProductFromList()[pri:0, instance:testscript.ManageProductTest@6771beb3]" started-at="2024-12-17T11:33:38 IST" name="verifyifAdminIsAbletoDeleteAProductFromList" finished-at="2024-12-17T11:33:38 IST" duration-ms="188" status="FAIL">
+          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+            <message>
+              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at Utility.ExcelUtility.readStringData(ExcelUtility.java:29)
+at testscript.ManageProductTest.verifyifAdminIsAbletoDeleteAProductFromList(ManageProductTest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDC6CE5A5
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyifAdminIsAbletoDeleteAProductFromList -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.ManageProductTest@6771beb3]" started-at="2024-12-17T11:33:38 IST" name="afterMethod" finished-at="2024-12-17T11:33:39 IST" duration-ms="391" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyifAdminIsAbletoDeleteAProductFromList status=FAILURE method=ManageProductTest.verifyifAdminIsAbletoDeleteAProductFromList()[pri:0, instance:testscript.ManageProductTest@6771beb3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testscript.ManageProductTest -->
+    </test> <!-- chrometest -->
+  </suite> <!-- paralleltesting -->
 </testng-results>

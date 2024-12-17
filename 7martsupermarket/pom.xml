@@ -1,49 +1,56 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-<modelVersion>4.0.0</modelVersion>
+	<groupId>comp.Obsqura</groupId>
 
-<groupId>comp.Obsqura</groupId>
+	<artifactId>7rmartsupermarket</artifactId>
 
-<artifactId>7rmartsupermarket</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
 
-<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
 
-<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
 
-<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
 
-<artifactId>selenium-java</artifactId>
+			<version>4.26.0</version>
 
-<version>4.26.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.8.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 
-</dependency>
+			<groupId>org.apache.poi</groupId>
 
-<dependency>
+			<artifactId>poi-ooxml</artifactId>
 
-<groupId>org.apache.poi</groupId>
+			<version>5.2.3</version>
 
-<artifactId>poi-ooxml</artifactId>
+		</dependency>
 
-<version>5.2.3</version>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 
-</dependency>
+		<dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+			<groupId>org.apache.poi</groupId>
 
-<dependency>
+			<artifactId>poi</artifactId>
 
-<groupId>org.apache.poi</groupId>
+			<version>5.2.3</version>
 
-<artifactId>poi</artifactId>
-
-<version>5.2.3</version>
-
-</dependency>
-<dependency>
+		</dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.21</version>
@@ -54,14 +61,38 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.6.4</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.1.2</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+		</dependency>
 
 
-</dependencies>
+	</dependencies>
+	<build>
 
-</project>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>paralleltesting.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project> 
